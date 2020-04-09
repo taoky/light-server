@@ -21,3 +21,6 @@ mkdir -p \
 
 rm -rf /var/cache/apk/*
 rm /etc/logrotate.d/squid
+
+sed -i 's/Denied./Denied. Please notice that you can only use light to access TCP 80, 443, 5228 ports./' /usr/share/squid/errors/en/ERR_ACCESS_DENIED
+sed -i 's/拒绝。/拒绝。请注意：Light 仅允许访问 TCP 80, 443, 5228 端口。/' /usr/share/squid/errors/zh-hans/ERR_ACCESS_DENIED
